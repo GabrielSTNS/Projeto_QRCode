@@ -20,6 +20,7 @@ def gerar_qrcode():
     link = link_site.get()
     nome = nome_qrcode.get()
     pasta = caminho_pasta.get()
+    tamanho = tamanho_qrcode.get()
 
     # Caso o link esteja em branco, será solicitado um link válido
     if not link:
@@ -49,7 +50,7 @@ def gerar_qrcode():
     try:
         url = pyqrcode.create(link)
         caminho_completo = os.path.join(pasta, f'{nome}.png')
-        url.png(caminho_completo, scale=8)
+        url.png(caminho_completo, scale=tamanho)
         resultado.config(text=f'QR Code criado: {caminho_completo}')
     except Exception as e:
         resultado.config(text=f'Erro ao criar QR Code: {e}') # Caso ocorra algum erro na criação do QR Code, será informado ao usuário
@@ -70,6 +71,9 @@ nome_label.grid(column=0, row=2, sticky=E, padx=5, pady=5)
 caminho_label = Label(janela, text='Informe o caminho da pasta:')
 caminho_label.grid(column=0, row=3, sticky=E, padx=5, pady=5)
 
+tamanho_label = Label(janela, text='Escolha o tamanho do QR Code')
+tamanho_label.grid(column=0, row=4, sticky=E, padx=5, pady=5)
+
 # Prompts de entrada
 link_site = Entry(janela, width=40)
 link_site.grid(column=1, row=1, padx=5, pady=5)
@@ -80,12 +84,17 @@ nome_qrcode.grid(column=1, row=2, padx=5, pady=5)
 caminho_pasta = Entry(janela, width=40)
 caminho_pasta.grid(column=1, row=3, padx=5, pady=5)
 
+# Scale para tamanho do QR Code
+tamanho_qrcode = Scale(janela, from_=1, to=10, orient=HORIZONTAL)
+tamanho_qrcode.set(8) # Tamanho padrão
+tamanho_qrcode.grid(column=1, row=4, padx=5, pady=5)
+
 # Botão para criação do QR Code
 botao = Button(janela, text='Clique aqui para criar seu QRCode.', command=gerar_qrcode)
-botao.grid(column=0, row=4, columnspan=2, pady=10)
+botao.grid(column=0, row=5, columnspan=2, pady=10)
 
 # Resultado
 resultado = Label(janela, text='')
-resultado.grid(column=0, row=5, columnspan=2, pady=10)
+resultado.grid(column=0, row=6, columnspan=2, pady=10)
 
 janela.mainloop()
