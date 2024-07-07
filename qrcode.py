@@ -5,7 +5,7 @@
 # Não precisa utilizar --icon caso não queira utilizar o icone do qrcode
 # --noconsole é utilizado para que não abra o terminal do Windows enquanto o programa esteja sendo executado. O Windows Defender pode apontar como vírus, basta permitir o arquivo.
 # --onefile é utilizado para que seja criado um único arquivo executável.
-# Seerão criadas duas pastas (build e dist) e um arquivo que o nome será o nome do arquivo com a extensão .spec. Ex: qrcode.spec. Você pode excluir a pasta build e o arquivo .spec, restará apenas a pasta dist onde o executável que você criou estará.
+# Serão criadas duas pastas (build e dist) e um arquivo que o nome será o nome do arquivo com a extensão .spec. Ex: qrcode.spec. Você pode excluir a pasta build e o arquivo .spec, restará apenas a pasta dist onde o executável que você criou estará.
 
 # As informações solicitadas pelo programa são:
 # Link do site que o QR Code irá redirecionar
