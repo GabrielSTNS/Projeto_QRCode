@@ -1,5 +1,6 @@
 # Já há um executável criado para utilização, mas caso prefira você pode criar seu próprio arquivo seguindo os passos abaixo:
 
+# Para rodar o código você terá que ter a biblioteca pyqrcode instalada (pip install pyqrcode), a biblioteca tkinter já vem instalada por padrão no Python.
 # Para criar um arquivo executável do código você precisará ter em sua máquina a biblioteca pyinstaller (pip install pyinstaller)
 # Após isso, abra o terminal do seu VSCode e utilize seguinte comando: pyinstaller --noconsole --onefile --icon=qricon.ico qrcode.py
 # Não precisa utilizar --icon caso não queira utilizar o icone do qrcode
