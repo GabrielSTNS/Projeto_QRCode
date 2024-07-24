@@ -69,7 +69,7 @@ link_label.grid(column=0, row=1, sticky=E, padx=5, pady=5)
 nome_label = Label(janela, text='Informe um nome para o arquivo:')
 nome_label.grid(column=0, row=2, sticky=E, padx=5, pady=5)
 
-caminho_label = Label(janela, text='Informe o caminho da pasta:')
+caminho_label = Label(janela, text='Informe o caminho da pasta onde deseja salvar o arquivo:')
 caminho_label.grid(column=0, row=3, sticky=E, padx=5, pady=5)
 
 tamanho_label = Label(janela, text='Escolha o tamanho do QR Code')
